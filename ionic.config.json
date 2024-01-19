@@ -1,0 +1,7 @@
+{
+  "name": "pagina-grupal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
