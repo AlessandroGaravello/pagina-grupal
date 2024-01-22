@@ -1,11 +1,17 @@
-
-.custom-card {
+ion-row:not(:first-child):not(:last-child) ion-col {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .custom-card {
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
   }
   
   .custom-card:hover {
@@ -14,17 +20,23 @@
   
   .custom-card ion-card-header {
     border-radius: 15px 15px 0 0;
-    background-color: #3880ff;
+    background-color: #9932CC;
     color: #fff;
+    text-align: center; /* Centrar el texto horizontalmente */
   }
   
   .custom-card ion-card-content {
     border-radius: 0 0 15px 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .custom-card ion-card-title,
   .custom-card ion-card-subtitle {
-    color: #333;
+    color: #000000;
+    text-align: center; /* Centrar el texto horizontalmente */
   }
   
   .custom-card p {
@@ -32,9 +44,15 @@
   }
   
   .custom-card a {
-    color: #3880ff;
+    color: #9932CC;
   }
   
   .custom-card a:hover {
     text-decoration: underline;
+  }
+  
+  /* Estilo específico para cards (exceptuando el primero y el último) */
+  ion-row:not(:first-child):not(:last-child) ion-col .custom-card {
+    flex-grow: 1;
+    min-width: 0;
   }
