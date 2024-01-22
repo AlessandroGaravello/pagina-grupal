@@ -1,23 +1,33 @@
 <ion-content [fullscreen]="true" class="p-4">
 
+  <!-- Nombre -->
+
+  <div class="mx-20 mt-12">
+    <h2 class="texto">Natalia Ramírez Benito</h2>
+  </div>
+
   <!-- Introducción -->
-  <div class="mb-8">
+  <div class="mx-20 mt-12">
+    <h2 class="text-2xl font-bold mb-4">Introducción</h2>
     <p class="text-lg">{{ introduction }}</p>
   </div>
 
-  <!-- Información del programador -->
-  <div class="mb-8" style="margin: 5%">
-    <h2 class="text-2xl font-bold mb-4">Lenguajes y habilidades</h2>
-    <div class="flex flex-wrap">
-      <!-- Iconos de lenguajes -->
-      <div *ngFor="let language of languages" class="w-1/5 mb-4">
-        <img [src]="'assets/icon/' + language.icon + '.svg'" alt="{{ language.name }}" class="w-12 h-12">
+  <!-- Lenguajes y programas -->
+  <div class="mx-20 mt-12" style="">
+    <h2 class="text-2xl font-bold mb-4">Lenguajes y tecnologías</h2>
+    <div class="flex justify-center items-center">
+      <div class="grid grid-cols-12 gap-16">
+        <!-- Iconos de lenguajes -->
+        <div *ngFor="let language of languages">
+          <img [src]="'assets/icon/' + language.icon + '.svg'" alt="{{ language.name }}" class="w-12 h-12">
+        </div>
       </div>
     </div>
+
   </div>
 
   <!-- Idiomas -->
-  <div class="mb-8" style="margin: 5%">
+  <div class="mx-20 mt-12">
     <h2 class="text-2xl font-bold mb-4">Idiomas</h2>
     <div class="flex">
       <!-- Banderas e información de idiomas -->
@@ -30,9 +40,13 @@
   </div>
 
   <!-- Contacto -->
-  <div style="margin: 5%">
+  <div class="mx-20 mt-12">
     <h2 class="text-2xl font-bold mb-4">Contacto</h2>
-    <button (click)="sendEmail()" class="bg-blue-500 text-white px-4 py-2 rounded">Enviar correo</button>
+    <div class="flex flex-1 gap-8 justify-center items-center">
+      <button (click)="sendEmail()" class="bg-blue-500 text-white px-4 py-2 w-40 rounded-full">Enviar correo</button>
+      <button (click)="github()" class="bg-blue-500 text-white px-4 py-2 w-40 rounded-full">Github</button>
+    </div>
+
   </div>
 
 </ion-content>

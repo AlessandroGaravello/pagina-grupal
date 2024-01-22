@@ -10,7 +10,6 @@ export class Tab3Page {
 
   introduction = '¡Hola! Soy una estudiante del ciclo formativo de grado superior en desarrollo de aplicaciones multiplataforma.';
 
-  // Define las habilidades y lenguajes aquí
   languages = [
     { name: 'JetBrains', icon: 'jetbrains' },
     { name: 'Java', icon: 'java' },
@@ -37,15 +36,13 @@ export class Tab3Page {
     { name: 'C#', icon: 'c-sharp' },
   ];
 
-  // Define los idiomas aquí
   languagesProficiency = [
     { language: 'Español', flag: 'es', proficiency: 'Nativo' },
     { language: 'Inglés', flag: 'us', proficiency: 'Avanzado' },
-    // Agrega otros idiomas aquí
   ];
 
-  // Agrega más información de contacto si es necesario
-  contactEmail = 'tucorreo@example.com';
+  contactEmail = 'natalia.ramirez@campusfp.es';
+  gitenl = 'https://github.com/Natalia-Ramirez-Benito';
 
   constructor(private platform: Platform) {}
 
@@ -53,8 +50,11 @@ export class Tab3Page {
     if (this.platform.is('android') || this.platform.is('ios')) {
       window.open(`mailto:${this.contactEmail}`, '_system');
     } else {
-      // Lógica para manejar otros dispositivos o navegadores
-      // Puede ser una redirección a una página de contacto, por ejemplo.
+      window.location.href = `mailto:${this.contactEmail}`;
     }
   }
+  github(){
+    window.open(this.gitenl, '_blank');
+  }
+
 }
