@@ -20,7 +20,7 @@ ion-row:not(:first-child):not(:last-child) ion-col {
   
   .custom-card ion-card-header {
     border-radius: 15px 15px 0 0;
-    background-color: #3880ff;
+    background-color: #9932CC;
     color: #fff;
     text-align: center; /* Centrar el texto horizontalmente */
   }
@@ -35,7 +35,7 @@ ion-row:not(:first-child):not(:last-child) ion-col {
   
   .custom-card ion-card-title,
   .custom-card ion-card-subtitle {
-    color: #333;
+    color: #000000;
     text-align: center; /* Centrar el texto horizontalmente */
   }
   
@@ -44,7 +44,7 @@ ion-row:not(:first-child):not(:last-child) ion-col {
   }
   
   .custom-card a {
-    color: #3880ff;
+    color: #9932CC;
   }
   
   .custom-card a:hover {
