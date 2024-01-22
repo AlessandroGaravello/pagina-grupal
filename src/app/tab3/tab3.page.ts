@@ -8,6 +8,8 @@ import {Platform} from "@ionic/angular";
 })
 export class Tab3Page {
 
+  introduction = '¡Hola! Soy una estudiante del ciclo formativo de grado superior en desarrollo de aplicaciones multiplataforma.';
+
   // Define las habilidades y lenguajes aquí
   languages = [
     { name: 'JetBrains', icon: 'jetbrains' },
